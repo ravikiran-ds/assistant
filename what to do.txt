@@ -1,0 +1,11 @@
+bot to click on videos to play
+voice recog
+bot to search on google website
+bot to send whats app message
+
+steps 
+voice recog and collect data
+selerium for yotube videos
+selerium bot to click on things and finding things
+whatsapp module
+questions and responses

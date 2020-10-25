@@ -1,0 +1,27 @@
+creating new environment with python ver 3.6
+install keras and tensorflow
+intall spyder on new env
+conda install anacoda to get all the packages of the def anaconda env
+
+#for speech recog
+conda install -c conda-forge portaudio
+pip install speechrecognition
+conda install -c anaconda portaudio
+conda install pyaudio
+pip install pyttsx3
+pip install pipwin
+pipwin install pyaudio
+restart computer
+MSVCP71.DLL and msvcr71.dll in system32 and systemwom64
+
+#speech recog 
+code in speech_recog.py
+get the text
+
+#speak
+code in speak.py
+text from speech_recog module
+
+#hate speech recognition
+using ann 
+exporting model and using in other files

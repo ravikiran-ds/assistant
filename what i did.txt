@@ -13,6 +13,7 @@ pip install pipwin
 pipwin install pyaudio
 restart computer
 MSVCP71.DLL and msvcr71.dll in system32 and systemwom64
+conda install -c conda-forge selenium
 
 #speech recog 
 code in speech_recog.py
@@ -25,3 +26,11 @@ text from speech_recog module
 #hate speech recognition
 using ann 
 exporting model and using in other files
+
+#search in google
+using selerium
+
+#search in youtube
+#open a website
+
+done.

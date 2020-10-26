@@ -12,6 +12,7 @@ from keras import models
 import pandas as pd
 from search import search_term
 from search import search_youtube
+from search import search_website
 
 #loading the model
 model=models.load_model("hate_speech.model")
@@ -89,12 +90,19 @@ def youtube():
     _,text=take_inp()
     search_youtube(text)
 
+def website():
+    print(" at the end add '.com'")
+    _,text=take_inp()
+    search_website(text)
+
 #hate speech assistant
 hate_speech()
 #search assistant
 search()
 #search youtube
 youtube()
+#website
+website()
 
 
     

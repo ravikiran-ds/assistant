@@ -10,6 +10,8 @@ import tensorflow
 import keras
 from keras import models
 import pandas as pd
+from search import search_term
+from search import search_youtube
 
 #loading the model
 model=models.load_model("hate_speech.model")
@@ -18,7 +20,7 @@ speak=SpeakText()
 #getting voice input from user
 #text=sr.get_text_from_speech() 
 def take_inp():
-    text=input("Enter text to talk:") 
+    text=input("Enter text :") 
     temp=text.split()
     #predicitng
     x=pd.read_csv("hate_headers.csv")
@@ -26,7 +28,7 @@ def take_inp():
         if i in x.columns.unique():
             x[i]=1
     pred=model.predict(x)
-    return pred
+    return pred,text
     print("{} is the list of values  {} is the text {} is the prediction for hate.".format(temp,text,pred[0][0]))
 #take_inp()
 
@@ -69,14 +71,31 @@ def out():
         normal_response()
         out()
 
-i=1
-while i==1:
-    try:
-        out()
-    except KeyboardInterrupt:
-        response("Good Bye",speed=120,sound=7)
-        i=2
-        
+def hate_speech():
+    i=1
+    while i==1:
+        try:
+            out()
+        except KeyboardInterrupt:
+            print("good bye")
+            response("Good Bye",speed=120,sound=7)
+            i=2
+            
+def search():
+    _,text=take_inp()
+    search_term(text)
+
+def youtube():
+    _,text=take_inp()
+    search_youtube(text)
+
+#hate speech assistant
+hate_speech()
+#search assistant
+search()
+#search youtube
+youtube()
+
 
     
 
